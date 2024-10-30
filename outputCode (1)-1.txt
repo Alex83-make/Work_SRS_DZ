@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter your name: ");
+        String name = scanner.nextLine();
+        
+        System.out.print("Enter how old you are: ");
+        String data = scanner.nextLine();
+        
+        System.out.print("Where do you work (study): ");
+        String work = scanner.nextLine();
+        System.out.print("M/W: ");
+        String pol = scanner.nextLine();
+        System.out.print("Hair color: ");
+        String col = scanner.nextLine();
+        System.out.print("Where are you: ");
+        String h = scanner.nextLine();
+        System.out.print("Mood: ");
+        String userMood = scanner.nextLine();
+        System.out.print("What year is it now?: ");
+        String currentYear = scanner.nextLine();
+        System.out.print("What day is it now?: ");
+        String currentDay = scanner.nextLine();
+
+        System.out.println();
+        System.out.println("Hello. I " + name);
+        System.out.println("To me " + data + " years!");
+        System.out.println("I am a " + pol);
+        System.out.println("I work (study in) " + work);
+        System.out.println("I am a " + col);
+        System.out.println("I am " + h);
+        System.out.println("I am " + userMood);
+        System.out.println("Now " + currentYear + " year");
+        System.out.println("Now " + currentDay + " Day");
+        System.out.println("Nice to meet you)");
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,43 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) throws InterruptedException {
+        int p_1 = 5;
+        int p_2 = 12;
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Что вы хотите: ");
+        String inr = scanner.nextLine();
+
+        if (inr.equals("Купить") || inr.equals("купить")) {
+            System.out.println("В наличии: ");
+            Thread.sleep(700);
+            System.out.println("1.Табак " + p_1 + " ед.");
+            Thread.sleep(700);
+            System.out.println("2.Сок " + p_2 + " ед.");
+
+            System.out.print("Что вы хотите: ");
+            int inr_1 = scanner.nextInt();
+            System.out.print("Кол-во: ");
+            int k = scanner.nextInt();
+            if (inr_1 == 1) {
+                System.out.print("Ваш возраст: ");
+                int ver = scanner.nextInt();
+                if (ver >= 18) {
+                    System.out.println("Товар продан!");
+                    p_1 -= k;
+                } else {
+                    System.out.println("Вам нет 18!!");
+                }
+            } else if (inr_1 == 2) {
+                System.out.println("Товар продан!");
+                p_2 -= k;
+            } else {
+                System.out.println("НЕТ Товара!");
+            }
+        } else {
+            System.out.println("НЕТ");
+        }
+        scanner.close();
+    }
+}

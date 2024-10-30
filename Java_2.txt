@@ -1,0 +1,28 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        System.out.print("Enter a number: ");
+        int a = scanner.nextInt();
+        
+        System.out.print("Enter a number before: ");
+        int a_1 = scanner.nextInt();
+        
+        int b = random.nextInt(a_1) + 1;
+        int c_1 = b + a;
+        int c_2 = b * a;
+        int c_3 = b - a;
+        double c_4 = (double) b / a; 
+
+        System.out.println(b + " + " + a + " = " + c_1);
+        System.out.println(b + " * " + a + " = " + c_2);
+        System.out.println(b + " - " + a + " = " + c_3);
+        System.out.println(b + " / " + a + " = " + c_4);
+
+        scanner.close();
+    }
+}
